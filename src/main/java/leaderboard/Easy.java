@@ -2,25 +2,25 @@ package leaderboard;
 
 
 public class Easy extends Difficulty implements Challenged{
-  int numOfChallengesCompleted;
-  double bonusScore;
+    int numOfChallengesCompleted;
+    double bonusScore;
 
-  public Easy(){
-    super();
-  }
+    public Easy(){
+      super();
+    }
 
-  @Override
-  public void setNumChallengesComplete(int numChallenges){
-    numOfChallengesCompleted = numChallenges;
-  }
+    @Override
+    public void setNumChallengesComplete(int numChallenges){
+      numOfChallengesCompleted = numChallenges;
+    }
   
-  @Override
-  public int getNumChallengesComplete(){
-    return numOfChallengesCompleted;
-  }
+    @Override
+    public int getNumChallengesComplete(){
+      return numOfChallengesCompleted;
+    }
   
-  @Override
-  public double getBonusScore(){
-    return bonusScore;
-  }
+    @Override
+    public double getBonusScore(){
+      return bonusScore;
+    }
 }

@@ -1,21 +1,21 @@
 package leaderboard;
 
 public class Heroic extends Difficulty implements Challenged{
-  int numOfChallengesCompleted;
-  double bonusScore;
+    int numOfChallengesCompleted;
+    double bonusScore;
 
-  @Override
-  public void setNumChallengesComplete(int numChallenges){
+    @Override
+    public void setNumChallengesComplete(int numChallenges){
 
-  }
+    }
   
-  @Override
-  public int getNumChallengesComplete(){
+    @Override
+    public int getNumChallengesComplete(){
 
-  }
+    }
   
-  @Override
-  public double getBonusScore(){
+    @Override
+    public double getBonusScore(){
 
-  }
+    }
 }
