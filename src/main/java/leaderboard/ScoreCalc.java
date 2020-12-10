@@ -11,7 +11,11 @@ public class ScoreCalc{
     public ScoreCalc(string filename){
       leaderboardParser parser = new leaderboardParser(filename);
       ArrayList<String> listOfScores = parser.getListOfScores();
-      convertStringsToDifficulties(ArrayList<String> listOfScores);
+      String[] difficultyConstants = listOfScores.get(0).split(",");
+      for(int i = 1; i < listOfScores.size(), i++){
+        Difficulty newDifficulty = makeDifficulty(listOfScores.get(i), difficultyConstants);
+        scores.put(newDifficulty.getPlayerId(), newDifficulty);
+      }
     }
 
     public double getScore(String playerId){
@@ -26,11 +30,17 @@ public class ScoreCalc{
       return scoreString;
     }
 
-    public void makeDifficulty(String score){
-      String[] = score.split(",");
-
-        
-
+    public void makeDifficulty(String score, String[] difficultyConstants){
+      String[] listOfScoreComponents = score.split(",");
+      if(listOfScoreComponents[1].equals("E")){
+        return Difficulty easyDifficulty = new Easy(String[] listOfScores, String[] difficultyConstants);
+      }
+      else if(listOfScoreComponents[1].equals("H")){
+        return Difficulty heroicDifficulty = new Heroic(String[] listOfScores, String[] difficultyConstants);
+      }
+      else{
+       return Difficulty hardCoreDifficulty = new HardCore(String[] listOfScores, String[] difficultyConstants);
+      }
     }
 
 }
