@@ -42,8 +42,13 @@ public class ScoreCalc {
 */
     public String toString() {
       String scoreString = "";
+      boolean ranOnce = false;
       for (String playerId : scores.keySet()) {
+        if (ranOnce) {
+          scoreString += "\n";
+        }
         scoreString += scores.get(playerId).toString();
+        ranOnce = true;
       }
       return scoreString;
     }
