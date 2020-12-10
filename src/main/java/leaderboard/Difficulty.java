@@ -111,7 +111,7 @@ public class Difficulty {
 *@return the playerid and leaderboard score in string form.
 */
     public String toString() {
-      return playerId + "," + getLeaderBoardScore();
+      return playerId + "," + String.format("%.0f", getLeaderBoardScore());
     }
 /**
 *sets the difficulty constant of the difficulty.
