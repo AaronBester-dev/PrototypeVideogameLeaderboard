@@ -1,11 +1,12 @@
 package leaderboard;
 
+import java.util.ArrayList;
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.FileWriter;
 import java.util.concurrent.TimeUnit;
 
-public class leaderboardParser(){
+public class leaderboardParser{
 
     private ArrayList<String> listOfScores = new ArrayList<>(); 
 
@@ -32,10 +33,10 @@ public class leaderboardParser(){
         BufferedReader reader = new BufferedReader(new FileReader(filename));
         String score;
  
-        while ( (score = bufReader.readLine()) != null) {
+        while ( (score = reader.readLine()) != null) {
           listOfScores.add(score);
         }
-        bufReader.close();
+        reader.close();
       } catch (Exception e) {
         System.out.println(e.getMessage());
       }

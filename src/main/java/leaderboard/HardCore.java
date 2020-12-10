@@ -11,15 +11,16 @@ public class HardCore extends Difficulty{
       super();
       setPlayerId(listOfScoreComponents[0]);
       setDifficultyConstant(Double.parseDouble(difficultyConstants[2]));
-      setBaseScore(listOfScoreComponents[3]);
-      setCoinsFound(listOfScoreComponents[4]);
-      setTimeTaken(listOfScoreComponents[5]);
-      setLivesLost(listOfScoreComponents[6]);
+      setBaseScore(Double.parseDouble(listOfScoreComponents[3]));
+      setCoinsFound(Integer.decode(listOfScoreComponents[4]));
+      setTimeTaken(Double.parseDouble(listOfScoreComponents[5]));
+      setLivesLost(Integer.decode(listOfScoreComponents[6]));
+      calculateLeaderBoardScore();
     }
 
-    public void setLeaderBoardScore(){
+    public void calculateLeaderBoardScore(){
       double firstBracket = getBaseScore() + getCoinsFound();
       double secondBracket = getTimeTaken() * getDifficultyConstant();
-      leaderBoardScore = firstBracket - secondBracket;
+      setLeaderBoardScore(firstBracket - secondBracket);
     }
 }

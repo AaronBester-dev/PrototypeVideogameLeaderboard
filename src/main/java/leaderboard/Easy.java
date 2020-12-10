@@ -2,8 +2,8 @@ package leaderboard;
 
 
 public class Easy extends Difficulty implements Challenged{
-    int numOfChallengesCompleted;
-    double bonusScore;
+    private int numOfChallengesCompleted;
+    private double bonusScore;
 
     public Easy(){
       super();
@@ -12,12 +12,13 @@ public class Easy extends Difficulty implements Challenged{
     public Easy(String[] listOfScoreComponents, String[] difficultyConstants){
       super();
       setPlayerId(listOfScoreComponents[0]);
-      setDifficultyConstant(Double.parseDouble(difficultyConstants[0]));
-      setNumChallengesComplete(listOfScoreComponents[2]);
-      setBaseScore(listOfScoreComponents[3] + getNumChallengesComplete());
-      setCoinsFound(listOfScoreComponents[4]);
-      setTimeTaken(listOfScoreComponents[5]);
-      setLivesLost(listOfScoreComponents[6]);
+      setDifficultyConstant(Double.parseDouble(difficultyConstants[1]));
+      setNumChallengesComplete(Integer.decode(listOfScoreComponents[2]));
+      setBaseScore(Double.parseDouble(listOfScoreComponents[3]) + getNumChallengesComplete());
+      setCoinsFound(Integer.decode(listOfScoreComponents[4]));
+      setTimeTaken(Double.parseDouble(listOfScoreComponents[5]));
+      setLivesLost(Integer.decode(listOfScoreComponents[6]));
+      calculateLeaderBoardScore();
     }
 
     @Override
@@ -35,10 +36,10 @@ public class Easy extends Difficulty implements Challenged{
       return getNumChallengesComplete() * getDifficultyConstant();
     }
 
-    public void setLeaderBoardScore(){
+    public void calculateLeaderBoardScore(){
       double firstBracket = getBaseScore() + getCoinsFound();
       double secondBracket = getTimeTaken() * getDifficultyConstant();
       double thirdBracket = getLivesLost() * getDifficultyConstant();
-      leaderBoardScore = firstBracket - secondBracket - thirdBracket;
+      setLeaderBoardScore(firstBracket - secondBracket - thirdBracket);
     }
 }
