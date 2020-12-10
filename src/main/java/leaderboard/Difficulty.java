@@ -1,7 +1,9 @@
 package leaderboard;
 
-
-public class Difficulty{
+/**
+*Main difficulty class.
+*/
+public class Difficulty {
     private String playerId;
     private double baseScore;
     private int coinsFound;
@@ -9,68 +11,120 @@ public class Difficulty{
     private int livesLost;
     private double difficultyConstant;
     private double leaderBoardScore;
-
-    public Difficulty(){
+/**
+*Default difficulty class.
+ */
+    public Difficulty() {
       baseScore = 0;
+      coinsFound = 0;
+      timeTaken = 0;
+      livesLost = 0;
+      difficultyConstant = 0;
+      leaderBoardScore = 0;
     }
-
-    public void setPlayerId(String newPlayerID){
+/**
+*Sets the playerId of the difficulty to the given id.
+*@param newPlayerID id of the new player
+ */
+    public void setPlayerId(String newPlayerID) {
       playerId = newPlayerID;
     }
-
-    public void setCoinsFound(int newCoinsFound){
+/**
+*Sets the number of coins of the difficulty to the given number.
+*@param newCoinsFound new number of coins.
+ */
+    public void setCoinsFound(int newCoinsFound) {
       coinsFound = newCoinsFound;
     }
-
-    public int getCoinsFound(){
+/**
+*gets the number of coins of the difficulty.
+*@return number of coins in the difficulty
+ */
+    public int getCoinsFound() {
       return coinsFound;
     }
-
-    public void setTimeTaken(double newTimeTaken){
+/**
+*sets the time taken of the difficulty.
+*@param newTimeTaken new time taken
+ */
+    public void setTimeTaken(double newTimeTaken) {
       timeTaken = newTimeTaken;
     }
-
-    public double getTimeTaken(){
+/**
+*gets the time taken of the difficulty.
+*@return amount of time taken
+ */
+    public double getTimeTaken() {
       return timeTaken;
     }
-
-    public void setLivesLost(int newLivesLost){
+/**
+*sets the number of lives lose of the difficulty.
+*@param newLivesLost new number of lives lost.
+ */
+    public void setLivesLost(int newLivesLost) {
       livesLost = newLivesLost;
     }
-
-    public int getLivesLost(){
+/**
+*gets the number of lives lost of the difficulty.
+*@return number of lives lost.
+ */
+    public int getLivesLost() {
       return livesLost;
     }
-
-    public void setBaseScore(double newBaseScore){
+/**
+*sets the base score of the difficulty.
+*@param newBaseScore new base score.
+ */
+    public void setBaseScore(double newBaseScore) {
       baseScore = newBaseScore;
     }
-
-    public double getBaseScore(){
+/**
+*gets the base score of the difficulty.
+*@return base score.
+ */
+    public double getBaseScore() {
       return baseScore;
     }
-
-    public String getPlayerId(){
+/**
+*gets the playerId of the difficulty.
+*@return player Id.
+ */
+    public String getPlayerId() {
       return playerId;
     }
-    
-    public void setLeaderBoardScore(double newLeaderBoardScore){
+/**
+*sets the leaderboard score of the difficulty.
+*@param newLeaderBoardScore new leaderboardscore
+ */
+    public void setLeaderBoardScore(double newLeaderBoardScore) {
       leaderBoardScore = newLeaderBoardScore;
     }
-
-    public double getLeaderBoardScore(){
+/**
+*gets the leaderboardscore of the difficulty.
+*@return leaderboardscore of the difficulty
+ */
+    public double getLeaderBoardScore() {
       return leaderBoardScore;
     }
-
-    public String toString(){
-      return playerId + "," + getLeaderBoardScore();
+/**
+*Takes the playerid and leaderboardscore of the difficulty.
+*@return the playerid and leaderboard score in string form.
+*/
+    public String toString() {
+      return playerId + "," + getLeaderBoardScore() + "\n";
     }
-
-    public void setDifficultyConstant(double val){
+/**
+*sets the difficulty constant of the difficulty.
+*@param val new difficulty constant.
+ */
+    public void setDifficultyConstant(double val) {
       difficultyConstant = val;
     }
-
-    public double getDifficultyConstant(){
+/**
+*gets the difficulty constant of the difficulty.
+*@return difficulty constant of the difficulty
+ */
+    public double getDifficultyConstant() {
       return difficultyConstant;
     }
 }

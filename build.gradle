@@ -58,5 +58,5 @@ test {
 }
 
 application {
-    mainClassName = "leaderboard.printLeaderboard"
+    mainClassName = "leaderboard.PrintLeaderboard"
 }

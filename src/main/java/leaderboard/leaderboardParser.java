@@ -3,37 +3,50 @@ package leaderboard;
 import java.util.ArrayList;
 import java.io.FileReader;
 import java.io.BufferedReader;
-import java.io.FileWriter;
-import java.util.concurrent.TimeUnit;
 
-public class leaderboardParser{
+/**
+*Class that parses the file for the information needed.
+*/
+public class LeaderboardParser {
 
-    private ArrayList<String> listOfScores = new ArrayList<>(); 
+    private ArrayList<String> listOfScores = new ArrayList<>();
 
-    public leaderboardParser(){
+/**
+*Default constructor of the class.
+*/
+    public LeaderboardParser() {
 
     }
-
-    public leaderboardParser(String filename){
+/**
+*Default constructor that gets the strings from the file.
+*@param filename name of the file to read from
+*/
+    public LeaderboardParser(String filename) {
       getStringsFromFile(filename);
     }
-
-    void setListOfScores(ArrayList<String> newListOfScores){
+/**
+*sets the list of scores for the class.
+*@param newListOfScores the new list of scores.
+ */
+    void setListOfScores(ArrayList<String> newListOfScores) {
         listOfScores = newListOfScores;
     }
-
-    ArrayList<String> getListOfScores(){
+/**
+*gets the list of scores for the class.
+*@return the list of scores.
+ */
+    ArrayList<String> getListOfScores() {
         return listOfScores;
     }
-
-    void getStringsFromFile(String filename){
-    // Similar to above but with BufferedReader
-    
+/**
+*gets the strings from the file given by the file name.
+*@param filename filename of the file with the data.
+*/
+    void getStringsFromFile(String filename) {
       try {
         BufferedReader reader = new BufferedReader(new FileReader(filename));
         String score;
- 
-        while ( (score = reader.readLine()) != null) {
+        while ((score = reader.readLine()) != null) {
           listOfScores.add(score);
         }
         reader.close();
