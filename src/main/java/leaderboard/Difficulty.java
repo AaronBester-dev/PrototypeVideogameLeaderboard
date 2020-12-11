@@ -1,5 +1,5 @@
 package leaderboard;
-
+import java.text.DecimalFormat;
 /**
 *Main difficulty class.
 */
@@ -111,7 +111,8 @@ public class Difficulty {
 *@return the playerid and leaderboard score in string form.
 */
     public String toString() {
-      return playerId + "," + String.format("%.0f", getLeaderBoardScore());
+      DecimalFormat doubleFormat = new DecimalFormat("0.###############");
+      return playerId + "," + doubleFormat.format(getLeaderBoardScore());
     }
 /**
 *sets the difficulty constant of the difficulty.

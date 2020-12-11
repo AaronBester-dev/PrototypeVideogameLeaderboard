@@ -4,6 +4,7 @@ package leaderboard;
 *Subset of difficulty for hardcore difficulties.
  */
 public class HardCore extends Difficulty {
+  private double timeBeforeDeath;
   private static final int DIFFICULTYCONSTANTLOCATION = 2;
   private static final int BASESCORELOCATION = 3;
   private static final int COINSLOCATION = 4;
@@ -30,6 +31,13 @@ public class HardCore extends Difficulty {
       setTimeTaken(Double.parseDouble(listOfScoreComponents[TIMETAKENLOCATION]));
       setLivesLost(Integer.decode(listOfScoreComponents[LIVESLOCATION]));
       calculateLeaderBoardScore();
+    }
+/**
+*Sets the time before death of the hardcore class.
+*@param gameMinutes the new time before death.
+*/
+    public void setTimeBeforeDeath(double gameMinutes) {
+      timeBeforeDeath = gameMinutes;
     }
 /**
 *Calculates and set the leaderboardscore of the difficulty.
