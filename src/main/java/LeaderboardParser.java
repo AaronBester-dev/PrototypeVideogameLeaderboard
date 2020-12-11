@@ -1,4 +1,4 @@
-package leaderboard;
+
 
 import java.util.ArrayList;
 import java.io.FileReader;

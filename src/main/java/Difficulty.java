@@ -1,4 +1,4 @@
-package leaderboard;
+
 import java.text.DecimalFormat;
 /**
 *Main difficulty class.

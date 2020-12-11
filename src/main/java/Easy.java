@@ -1,4 +1,4 @@
-package leaderboard;
+
 
 /**
 *Subset of difficulty for easy difficulties.

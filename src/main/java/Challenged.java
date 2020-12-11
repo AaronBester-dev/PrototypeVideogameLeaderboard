@@ -1,4 +1,4 @@
-package leaderboard;
+
 
 /**
 *Interface that is used to implement the number of challenges for the easy and heroic difficulties.

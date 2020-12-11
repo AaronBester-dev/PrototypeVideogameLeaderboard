@@ -1,5 +1,5 @@
 
-package leaderboard;
+
 
 /**
 *Class that holds the main function.
