@@ -7,7 +7,6 @@ import java.util.LinkedHashMap;
 *Class that creates all of the difficulties and prints it out when needed.
  */
 public class ScoreCalc {
-
     private LinkedHashMap<String, Difficulty> scores = new LinkedHashMap<>();
 /**
 *Default constructor for the scorecalc class.
@@ -34,7 +33,7 @@ public class ScoreCalc {
 *@return the score associated with the playerid.
 */
     public double getScore(String playerId) {
-       return scores.get(playerId).getLeaderBoardScore();
+      return scores.get(playerId).getLeaderBoardScore();
     }
 /**
 *Creates a string of every single difficulty and score.

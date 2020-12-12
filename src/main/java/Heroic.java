@@ -18,7 +18,7 @@ public class Heroic extends Difficulty implements Challenged {
     *Default constructor for heroic class.
     */
     public Heroic() {
-        super();
+      super();
     }
 /**
 *Default constructor for heroic that sets the values in the difficulty to the

@@ -29,14 +29,14 @@ public class LeaderboardParser {
 *@param newListOfScores the new list of scores.
  */
     void setListOfScores(ArrayList<String> newListOfScores) {
-        listOfScores = newListOfScores;
+      listOfScores = newListOfScores;
     }
 /**
 *gets the list of scores for the class.
 *@return the list of scores.
  */
     ArrayList<String> getListOfScores() {
-        return listOfScores;
+      return listOfScores;
     }
 /**
 *gets the strings from the file given by the file name.
@@ -54,6 +54,4 @@ public class LeaderboardParser {
         System.out.println(e.getMessage());
       }
     }
-
-
 }

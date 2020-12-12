@@ -4,12 +4,12 @@
 *Subset of difficulty for hardcore difficulties.
  */
 public class HardCore extends Difficulty {
-  private double timeBeforeDeath;
-  private static final int DIFFICULTYCONSTANTLOCATION = 2;
-  private static final int BASESCORELOCATION = 3;
-  private static final int COINSLOCATION = 4;
-  private static final int TIMETAKENLOCATION = 5;
-  private static final int LIVESLOCATION = 6;
+    private double timeBeforeDeath;
+    private static final int DIFFICULTYCONSTANTLOCATION = 2;
+    private static final int BASESCORELOCATION = 3;
+    private static final int COINSLOCATION = 4;
+    private static final int TIMETAKENLOCATION = 5;
+    private static final int LIVESLOCATION = 6;
 /**
     *Default constructor for hardcore class.
     */
